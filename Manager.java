@@ -59,7 +59,7 @@ public class Manager {
 	}
 	
 	//creates separate files for new media objects
-	public void createMediaFiles(String directory) {
+	public void createMediaFiles(String directory) throws FileNotFoundException {
 		//initiate file writer
 		PrintWriter out = new PrintWriter(directory);
 		
@@ -68,7 +68,7 @@ public class Manager {
 			String mediaFileName = directory + "\\" + orderSystem.get(i).getClass().getSimpleName() + "-" + orderSystem.get(i).getID() + ".txt";
 		try {
 			out = new PrintWriter(new FileWriter(mediaFileName));
-		} catch (IOException e) {\
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		out.println(orderSystem.get(i).toString());

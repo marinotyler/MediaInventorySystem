@@ -91,6 +91,9 @@ public class MediaRentalSystem{
 			}
 		}while (userChoice != 4);
 		
+		scan.close();
+		scanstr.close();
+		
 		System.out.println("Thanks for renting from us. Goodbye!");
 	}
 
